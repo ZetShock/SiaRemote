@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/lenkLinks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Links" />
+
+        <Button
+            android:id="@+id/lenkMid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mitte" />
+
+        <Button
+            android:id="@+id/lenkRechts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rechts" />
+
+        <Button
+            android:id="@+id/btnEmergency"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="80dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_dark"
+            android:text="Notstopp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/viewScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0">
+
+        <TextView
+            android:id="@+id/txtReceive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#eeeeee"
+            android:hint="Message shows up here ..."
+            android:scrollbars="vertical"
+            android:typeface="monospace" />
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/editSend"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Befehl eingeben"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="177dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="5dp"
+            android:text="Senden" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/gasBar"
+        android:layout_width="215dp"
+        android:layout_height="231dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="-120dp"
+        android:max="20"
+        android:progress="10"
+        android:rotation="270"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/lenkView"
+        android:layout_width="334dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-70dp"
+        android:editable="false"
+        android:gravity="center"
+        android:text="50" />
+
+    <TextView
+        android:id="@+id/gasView"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="-85dp"
+        android:editable="false"
+        android:gravity="right"
+        android:text="10" />
+
+    <SeekBar
+        android:id="@+id/lenkBar"
+        android:layout_width="333dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="50dp"
+        android:max="100"
+        android:progress="50" />
+
+</LinearLayout> <!-- </RelativeLayout> -->
