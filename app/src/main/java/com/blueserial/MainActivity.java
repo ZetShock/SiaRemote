@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 	private Button mBtnSend;
 	private Button mlenkLinks;
 	private Button mlenkMid;
-	private Button mlenkRechts;
+	//private Button mlenkRechts;
 	private TextView mlenkView;
 	private TextView mgasView;
 	private ScrollView scrollView;
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 		mBtnSend = (Button) findViewById(R.id.btnSend);
 		mlenkLinks = (Button) findViewById(R.id.lenkLinks);
 		mlenkMid= (Button) findViewById(R.id.lenkMid);
-		mlenkRechts = (Button) findViewById(R.id.lenkRechts);
+		//mlenkRechts = (Button) findViewById(R.id.lenkRechts);
 		//mBtnClear = (Button) findViewById(R.id.btnClear);
 		mTxtReceive = (TextView) findViewById(R.id.txtReceive);
 		mEditSend = (EditText) findViewById(R.id.editSend);
@@ -131,13 +131,13 @@ public class MainActivity extends Activity {
 			@Override
 			public void onProgressChanged(SeekBar seekBar, int lenkProgress, boolean b) {
 				try {
-					mBTSocket.getOutputStream().write(lenkProgress);
+					mBTSocket.getOutputStream().write(lenkProgress + 50);
 
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				mlenkView.setText(Integer.toString(lenkProgress));
+				mlenkView.setText(Integer.toString(lenkProgress + 50));
 			}
 
 			@Override
@@ -149,7 +149,7 @@ public class MainActivity extends Activity {
 			public void onStopTrackingTouch(SeekBar seekBar) {
 				lenkBar.setProgress(50);
 				try {
-					mBTSocket.getOutputStream().write(50);
+					mBTSocket.getOutputStream().write(100);
 
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -196,7 +196,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				try {
-					mBTSocket.getOutputStream().write(29);
+					mBTSocket.getOutputStream().write(35);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -208,25 +208,14 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				try {
-					mBTSocket.getOutputStream().write(30);
+					mBTSocket.getOutputStream().write(45);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		});
-		mlenkRechts.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View arg0) {
-				try {
-					mBTSocket.getOutputStream().write(31);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
 
 
 		/*mBtnClear.setOnClickListener(new OnClickListener() {
