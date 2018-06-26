@@ -17,21 +17,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Links" />
+            android:text="Ferngesteuert" />
 
         <Button
             android:id="@+id/lenkMid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Mitte" />
-
-        <Button
-            android:id="@+id/lenkRechts"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Rechts" />
+            android:text="Autonom" />
 
         <Button
             android:id="@+id/btnEmergency"
@@ -93,7 +86,8 @@
         android:max="20"
         android:progress="10"
         android:rotation="270"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:thumb="@android:drawable/ic_menu_compass" />
 
     <TextView
         android:id="@+id/lenkView"
@@ -121,6 +115,7 @@
         android:layout_height="44dp"
         android:layout_marginTop="50dp"
         android:max="100"
-        android:progress="50" />
+        android:progress="50"
+        android:thumb="@android:drawable/ic_menu_compass" />
 
 </LinearLayout> <!-- </RelativeLayout> -->
